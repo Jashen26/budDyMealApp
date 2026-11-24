@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BudDyMealApp</title>
+    <link rel="stylesheet" href="~/css/slider.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Global.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/css/Home.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/BudDyMealApp.styles.css" asp-append-version="true" />
+</head>
+<body>
+
+
+    <header>
+     <nav>
+         <div class="navbar-Brand">BudDyMealApp</div>
+         <div class="user-profile">
+             <p>Jonny Dog</p>
+             <img src="~/images/defaultAvatar.svg" alt="User Image" />
+         </div>
+     </nav>    
+    </header>
+
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    
+
+    <footer>
+        <div class="container">
+            &copy; 2026 - BudDyMealApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
